@@ -27,7 +27,7 @@ class BookList extends Component {
   }
 }
 
-function mapStateToPros(state) {
+function mapStateToProps(state) {
   // Whatever is returned will show up as pros inside of BookList
   return {
     books: state.books
@@ -42,4 +42,4 @@ function mapDispatchToProps(dispatch) {
 
 // Promote BookList from a component to a container - it needs to know about this new
 // dispatch method, slectBook. Make it available as a prop.
-export default connect(mapStateToPros, mapDispatchToProps)(BookList);
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
